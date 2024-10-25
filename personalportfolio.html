@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .highlight {
+            color: #ff4081;
+        }
+
+        .btn {
+            background-color: #ff4081;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* About Section */
+        #about, #skills, #projects, #contact {
+            padding: 100px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid, .projects-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill, .project {
+            background-color: #0072ff;
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes scale {
+            0% { transform: scale(0.8); }
+            100% { transform: scale(1); }
+        }
+
+        .animate-fade {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .animate-bounce {
+            animation: bounce 1.5s infinite;
+        }
+
+        .animate-scale {
+            animation: scale 0.8s ease-out;
+        }
+
+        /* Contact Form */
+        form input, form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h1 class="animate-fade">Hi, I'm <span class="highlight">Sethukannan M</span></h1>
+            <p class="animate-fade">A Passionate Developer</p>
+            <a href="#about" class="btn animate-bounce">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a full-stack web developer with a love for creating stunning web experiences. I enjoy coding, designing, and solving complex problems through technology.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill animate-scale">HTML</div>
+                <div class="skill animate-scale">CSS</div>
+                <div class="skill animate-scale">JavaScript</div>
+                <div class="skill animate-scale">React</div>
+                <div class="skill animate-scale">Node.js</div>
+                <div class="skill animate-scale">Python</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project animate-fade">
+                    <h3>Photoelectric Effect Simulation</h3>
+                    <p>The photoelectric effect simulation demonstrates how light shining on a metal surface ejects electrons, showing that light energy is transferred to electrons as kinetic energy. Users can adjust light frequency and intensity to observe how higher frequencies enable electron emission, while intensity influences the number of emitted electrons without affecting their energy. This simulation visually captures the quantum nature of light.</p>
+                </div>
+                <div class="project animate-fade">
+                    <h3>Smart Recycle Bin</h3>
+                    <p>A smart recycle bin is an automated waste-sorting system equipped with sensors and AI. It identifies and separates recyclable materials from non-recyclable ones, optimizing waste management by reducing manual sorting. Often used in public spaces, it encourages eco-friendly practices and promotes efficient recycling processes.</p>
+                </div>
+                <div class="project animate-fade">
+                    <h3>Web Development Using WIX</h3>
+                    <p>Physio 360 is a user-friendly website built using WIX, designed to showcase comprehensive physiotherapy services. It offers insights into specialized treatments, practitioner profiles, and an easy booking system, making it convenient for clients to access high-quality care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn animate-bounce">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Smooth Scrolling for Nav Links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Contact Form Submission Alert
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+        });
+    </script>
+</body>
+</html>
